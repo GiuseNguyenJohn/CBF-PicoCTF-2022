@@ -20,7 +20,7 @@ Research on Google brings about the following Stack Overflow page:
 [Relation between factors and their sum on RSA](https://crypto.stackexchange.com/questions/87308/relation-between-factors-and-their-sum-on-rsa)
 
 In short, the quadratic equation can be used. If we know that `x = p + q` and `n = p * q`, then
-* Let `delta = sqrt(x^2 - 4n)`.
+* Let `delta = sqrt(x ** 2 - 4n)`.
 * Let `p = (x + delta) / 2`.
 * Let `q = (x - delta) / 2`.
 
