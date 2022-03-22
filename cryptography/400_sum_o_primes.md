@@ -16,11 +16,11 @@ Before we continue, general some notes about RSA:
 * e is almost always 65537 (0x10001) 
 Here, looking at the script used to generate the ciphertext, as well its output, we see we're given n and e. However, we're also given the sum of p and q. Odd...
 
-Research on Google brings about the following Stack Overflow page:
+Research on Google brings about the following Stack Overflow page: 
 [Relation between factors and their sum on RSA](https://crypto.stackexchange.com/questions/87308/relation-between-factors-and-their-sum-on-rsa)
 
-In short, the quadratic equation can be used. 
-* Let the variable `delta = sqrt(x^2 - 4n)`.
+In short, the quadratic equation can be used. If we know that `x = p + q` and `n = p * q`, then
+* Let `delta = sqrt(x^2 - 4n)`.
 * Let `p = (x + delta) / 2`.
 * Let `q = (x - delta) / 2`.
 
