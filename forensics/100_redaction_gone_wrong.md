@@ -21,4 +21,4 @@ picoCTF{C4n_Y0u_S33_m3_fully}
 Redacted document.
 ```
 
-Flag: picoCTF{C4n_Y0u_S33_m3_fully}
+**Flag: picoCTF{C4n_Y0u_S33_m3_fully}**

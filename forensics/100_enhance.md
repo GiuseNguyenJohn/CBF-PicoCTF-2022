@@ -59,4 +59,4 @@ near the bottom.
 ```
 It's the flag in plaintext!
 
-Flag: picoCTF{3nh4nc3d_6ae42bba}
+**Flag: picoCTF{3nh4nc3d_6ae42bba}**

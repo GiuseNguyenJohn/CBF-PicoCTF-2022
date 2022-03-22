@@ -8,4 +8,4 @@ Download the game.
 ## Solution
 
 
-`Flag: picoCTF{ur_4_w1z4rd_DC74CBD3}`
+**Flag: picoCTF{ur_4_w1z4rd_DC74CBD3}**

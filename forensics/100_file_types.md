@@ -92,4 +92,4 @@ archives in order:
 
 After extracting them, there is a file with hex characters. Decode the hex for the flag.
 
-Flag: picoCTF{f1len@m3_m@n1pul@t10n_f0r_0b2cur17y_278f1a18}
+**Flag: picoCTF{f1len@m3_m@n1pul@t10n_f0r_0b2cur17y_278f1a18}**

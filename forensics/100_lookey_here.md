@@ -14,5 +14,4 @@ $ cat anthem.flag.txt | grep picoCTF
       we think that the men of picoCTF{gr3p_15_@w3s0m3_c91a291d}
 $
 ```
-Flag: picoCTF{gr3p_15_@w3s0m3_c91a291d}
-
+**Flag: picoCTF{gr3p_15_@w3s0m3_c91a291d}**

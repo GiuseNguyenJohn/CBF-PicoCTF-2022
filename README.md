@@ -6,14 +6,16 @@ Note: Remember to include author of writeup.
 Draft Template:
 ```
 # <Challenge Name>
+
 Author: <name>
 
 ## Description
 
 <challenge description>
+
 ## Solution
 
 <solution>
 
-Flag: <flag>
+**Flag: <flag>**
 ```
