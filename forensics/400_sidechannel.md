@@ -75,5 +75,9 @@ for x in range(8):
 		time_before = time()
 		call([ 'echo "{}" | ./pin_checker'.format(pin_to_try) ])
 		time_after = time()
+		# calculate delay
+		delay = time_after - time_before
+		# 
+
 
 ```
