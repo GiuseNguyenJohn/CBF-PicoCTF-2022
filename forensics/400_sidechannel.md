@@ -70,18 +70,18 @@ for x in range(8):
 	correct_digit = ''
 	# iterate through 10 digits for each position
 	for i in range(10):
-		pin_to_try = str(pin + str(i)).ljust('0', 8)
+		pin_to_try = str(pin + str(i)).ljust(8, '0')
 		# record time before and after the blocking call to pin_checker 
 		time_before = time()
-		# call([ 'echo "{}" | ./pin_checker'.format(pin_to_try) ])
-		print(pin_to_try)
+		call([ 'echo',  '"{}" | ./pin_checker'.format(pin_to_try) ])
+		# print(pin_to_try)
 		time_after = time()
 		# calculate delay
 		delay = time_after - time_before
 		# if delay is greater than the longest delay so far,
 		# make the digit that was just entered the correct digit
 		if delay > longest_delay:
-			longest delay = delay
+			longest_delay = delay
 			correct_digit = str(i)
 	# append the correct number to pin
 	pin += correct_digit
