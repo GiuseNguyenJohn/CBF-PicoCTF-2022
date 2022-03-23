@@ -51,7 +51,7 @@ calculated by subtracting the finish time recoreded from the initial
 time recorded. Of course, for this to work, the python program needs
 to stop executing instructions while the request is sent and received
 so that the times recorded will actually be accurate. This idea
-is called a `blocking` instruction, since it "blocks" the program
+is called a **blocking** instruction, since it "blocks" the program
 until the current task is finished; then it continues. With this
 in mind, here is a script I initially came up with.
 
