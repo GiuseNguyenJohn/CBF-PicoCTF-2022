@@ -29,8 +29,8 @@ file name search box on the left, and I got these results:
 ```
 Deleted     Type  		File Name 				   			Written Time 	   				Access Time		 	  			Change Time 				Size 	UID 	GID 	   	Meta 	  
 						dir / in	   	
-[x]			r / r	   	/3/root/my_folder/flag.txt	   	2021-09-29 11:10:02 (PDT)	   	2021-09-29 11:10:02 (PDT)	   	2021-09-29 11:10:02 (PDT)	   	42	   	101	   	100	   	2082 (realloc)
-			r / r	   	/3/root/my_folder/flag.uni.txt	2021-09-29 11:08:48 (PDT)	   	2021-09-29 11:08:29 (PDT)	   	2021-09-29 11:08:48 (PDT)	   	60	   	0	   	0	   	2371
+[x]	r / r	   	/3/root/my_folder/flag.txt	   	2021-09-29 11:10:02 (PDT)	   	2021-09-29 11:10:02 (PDT)	   	2021-09-29 11:10:02 (PDT)	   	42	   	101	   	100	   	2082 (realloc)
+	r / r	   	/3/root/my_folder/flag.uni.txt	2021-09-29 11:08:48 (PDT)	   	2021-09-29 11:08:29 (PDT)	   	2021-09-29 11:08:48 (PDT)	   	60	   	0	   	0	   	2371
 ```
 
 As the check mark shows, the first file was deleted, and if we try to click on it
