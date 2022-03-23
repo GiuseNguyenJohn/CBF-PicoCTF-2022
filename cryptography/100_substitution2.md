@@ -9,7 +9,7 @@ Download the message here.
 
 ## Solution
 
-The goal of this challenge is to not rely on spacing, capitalization, and punctuation to be able to make out words. In other words, use bigram analysis to analyze pairs of letters, and compare frequency to letter pairs to statistical letter frequencies in the English language.
+The goal of this challenge is to not rely on spacing, capitalization, and punctuation to be able to make out words. In other words, use bigram analysis to analyze pairs of letters, and compare the frequency of those letter pairs to statistical letter frequencies in the English language.
 
 Just use the same substitution cipher though...
 [Guballa Substitution Solver](https://www.guballa.de/substitution-solver)
