@@ -15,11 +15,11 @@ We have a Caesar Cipher without a key that's been explicitly stated. To complete
 Here's an annotated script to do that:
 [diffie_hellman.py](scripts/diffie_hellman.py)
 
-View this video from Computerphile for more on the mathematics behind Diffie-Hellman.
+View this video from Computerphile for more on the mathematics behind Diffie-Hellman:
 
 [Diffie Hellman -the Mathematics bit- Computerphile](https://www.youtube.com/watch?v=Yjrfm_oRO0w)
 
-The result is 5, and this was the *encrypt* value. We need to *decrypt* it, so the shift will be -5. Use a tool like Cryptii to shift the encoded flag, and then wrap it in flag format. Don't forget change the shift alphabet to include numbers!
+The result is 5, and this was the *encrypt* value. We need to *decrypt* it, so the shift will be -5. Use a tool like Cryptii to shift the encoded flag, and then wrap it in flag format. Don't forget to change the shift alphabet to include numbers!
 * Alphabet should be "abcdefghijklmnopqrstuvwxyz0123456789"
 
 **Flag: picoCTF{C4354R_C1PH3R_15_4_817_0U7D473D_7609EC61}**
