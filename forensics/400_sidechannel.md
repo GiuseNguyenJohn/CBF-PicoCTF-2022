@@ -58,8 +58,8 @@ in mind, here is a script I initially came up with.
 ```python
 # subprocess.call() is blocking, which is what we want
 # (https://stackoverflow.com/questions/21936597/blocking-and-non-blocking-subprocess-calls)
-from subprocess import call
-from time import time
+from os import system
+from time import perf_counter
 
 pin = ''
 # iterate through all 8 digits (positions) of the pin
@@ -72,10 +72,10 @@ for x in range(8):
 	for i in range(10):
 		pin_to_try = str(pin + str(i)).ljust(8, '0')
 		# record time before and after the blocking call to pin_checker 
-		time_before = time()
-		call([ 'echo',  '"{}" | ./pin_checker'.format(pin_to_try) ])
-		# print(pin_to_try)
-		time_after = time()
+		time_before = perf_counter()
+		system('echo "{}" | ./pin_checker'.format(pin_to_try))
+		time_after = perf_counter()
+		print(pin_to_try)
 		# calculate delay
 		delay = time_after - time_before
 		# if delay is greater than the longest delay so far,
