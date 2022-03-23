@@ -56,5 +56,24 @@ until the current task is finished; then it continues. With this
 in mind, here is a script I initially came up with.
 
 ```python
+# subprocess.call() is blocking, which is what we want
+# (https://stackoverflow.com/questions/21936597/blocking-and-non-blocking-subprocess-calls)
+from subprocess import call
+from time import time
+
+pin = ''
+# iterate through all 8 digits (positions) of the pin
+for x in range(8):
+	# longest_delay will be used to compare so we can determine
+	# the digit that the program takes longest to process
+	longest_delay = 0
+	correct_digit = ''
+	# iterate through 10 digits for each position
+	for i in range(10):
+		pin_to_try = str(pin + str(i)).ljust('0', 8)
+		# record time before and after the blocking call to pin_checker 
+		time_before = time()
+		call([ 'echo "{}" | ./pin_checker'.format(pin_to_try) ])
+		time_after = time()
 
 ```
