@@ -27,7 +27,7 @@ the image, ran `pwd`, and pasted the path and filename in the box)
 Finally, we can begin our search. My first thought was to enter `flag` into the 
 file name search box on the left, and I got these results:
 ```
-Deleted     Type  		File Name 				   Written Time 	   		Access Time		Change Time     Size   UID   GID   Meta 	  
+Deleted     Type  		File Name 				   Written Time 	   	Access Time			Change Time     	Size    UID    GID    Meta 	  
 						dir / in	   	
 [x]	r / r	   	/3/root/my_folder/flag.txt	   	2021-09-29 11:10:02 (PDT)	 2021-09-29 11:10:02 (PDT)	 2021-09-29 11:10:02 (PDT)	 42	 101	 100	 2082 (realloc)
 	r / r	   	/3/root/my_folder/flag.uni.txt		2021-09-29 11:08:48 (PDT)	 2021-09-29 11:08:29 (PDT)	 2021-09-29 11:08:48 (PDT)	 60	 0	 0	 2371
