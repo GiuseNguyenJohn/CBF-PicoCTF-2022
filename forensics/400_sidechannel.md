@@ -53,39 +53,67 @@ to stop executing instructions while the request is sent and received
 so that the times recorded will actually be accurate. This idea
 is called a **blocking** instruction, since it "blocks" the program
 until the current task is finished; then it continues. With this
-in mind, here is a script I initially came up with.
+in mind, here is the script I came up with.
 
 ```python
 # subprocess.call() is blocking, which is what we want
 # (https://stackoverflow.com/questions/21936597/blocking-and-non-blocking-subprocess-calls)
-from os import system
+import subprocess
 from time import perf_counter
+import os
+import sys
 
 pin = ''
 # iterate through all 8 digits (positions) of the pin
 for x in range(8):
-	# longest_delay will be used to compare so we can determine
-	# the digit that the program takes longest to process
-	longest_delay = 0
-	correct_digit = ''
-	# iterate through 10 digits for each position
-	for i in range(10):
-		pin_to_try = str(pin + str(i)).ljust(8, '0')
-		# record time before and after the blocking call to pin_checker 
-		time_before = perf_counter()
-		system('echo "{}" | ./pin_checker'.format(pin_to_try))
-		time_after = perf_counter()
-		print(pin_to_try)
-		# calculate delay
-		delay = time_after - time_before
-		# if delay is greater than the longest delay so far,
-		# make the digit that was just entered the correct digit
-		if delay > longest_delay:
-			longest_delay = delay
-			correct_digit = str(i)
-	# append the correct number to pin
-	pin += correct_digit
+    # longest_delay will be used to compare so we can determine
+    # the digit that the program takes longest to process
+    longest_delay = 0
+    correct_digit = ''
+    # iterate through 10 digits for each position
+    for i in range(10):
+        pin_to_try = str(pin + str(i)).ljust(8, '0')
+        # record time before and after the blocking call to pin_checker 
+        time_before = perf_counter()
+        # redirect unnecessary output of program to /dev/null
+        subprocess.call(f'echo "{pin_to_try}" | ./pin_checker', shell=True, stdout=open(os.devnull, 'wb'))
+        time_after = perf_counter()
+        # show pin being tried for a 1337 effect
+        print(pin_to_try, end='\r')
+        # calculate delay
+        delay = time_after - time_before
+        # if delay is greater than the longest delay so far,
+        # make the digit that was just entered the correct digit
+        if delay > longest_delay:
+            longest_delay = delay
+            correct_digit = str(i)
+    # append the correct number to pin
+    pin += correct_digit
 print(pin)
 ```
-48390554
-48390890
+
+```
+$ python3 pin_checker.py
+48390513
+$ ./pin_checker         
+Please enter your 8-digit PIN code:
+48390513
+8
+Checking PIN...
+Access granted. You may use your PIN to log into the master server.
+$
+```
+This is the first time I've felt so ELATED to have solved a ctf challenge!
+Let's get the flag.
+
+```
+$ nc saturn.picoctf.net 53932                                                                                 1 ⨯
+Verifying that you are a human...
+Please enter the master PIN code:
+48390513
+Password correct. Here's your flag:
+picoCTF{t1m1ng_4tt4ck_18704dda}
+$
+```
+
+**Flag: picoCTF{t1m1ng_4tt4ck_18704dda}**
