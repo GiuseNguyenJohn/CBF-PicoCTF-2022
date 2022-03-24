@@ -73,7 +73,8 @@ for x in range(8):
     # iterate through 10 digits for each position
     for i in range(10):
         pin_to_try = str(pin + str(i)).ljust(8, '0')
-        # record time before and after the blocking call to pin_checker 
+        # record time before and after the blocking call to pin_checker
+		# using perf_counter(), which is a bit more accurate than time()
         time_before = perf_counter()
         # redirect unnecessary output of program to /dev/null
         subprocess.call(f'echo "{pin_to_try}" | ./pin_checker', shell=True, stdout=open(os.devnull, 'wb'))
@@ -115,5 +116,7 @@ Password correct. Here's your flag:
 picoCTF{t1m1ng_4tt4ck_18704dda}
 $
 ```
+(Because of the nature of this attack, the pin you get might be incorrect
+and you might have to run it multiple times to get the correct one.)
 
 **Flag: picoCTF{t1m1ng_4tt4ck_18704dda}**
