@@ -14,6 +14,7 @@ Before we continue, general some notes about RSA:
 * p and q are (very large) primes
 * n is the product of p and q
 * e is almost always 65537 (0x10001) 
+
 Here, looking at the script used to generate the ciphertext, as well its output, we see we're given n and e. However, we're also given the sum of p and q. Odd...
 
 Research on Google brings about the following Stack Exchange page: 
