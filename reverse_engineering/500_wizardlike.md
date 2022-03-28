@@ -7,9 +7,7 @@ Download the game.
 
 ## Solution
 This writeup is intended to provide just enough information for a streamlined
-solve; it is not exactly how we solved the challenge. For an overly
-verbose and accurate description of our trials and tribulations, visit
-our other writeup of wizardlike [here](500_verbose_wizardlike.md).
+solve; it is not exactly what we experienced.
 ### Static Analysis in Ghidra
 The first step 
 ### Dynamic Analysis in Radare2
