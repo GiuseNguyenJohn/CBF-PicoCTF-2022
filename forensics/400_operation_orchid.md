@@ -1,4 +1,4 @@
-# # Operation Orchid
+# Operation Orchid
 Author: John
 
 ## Description
